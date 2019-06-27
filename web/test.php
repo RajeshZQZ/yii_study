@@ -1,20 +1,25 @@
 <?php
-// comment out the following two lines when deployed to production
-$time = time();
-echo $time;
-echo "<br>";
-echo date('Y-m-d h:i:s', time());
-$unSign = "timestamp=".$time;
-echo "<br>".$unSign;
-$sign_key = "KoQAW@ee@IR!Q@w348lPuh06ik4LDkJl";
-$res = $unSign.$sign_key;
-echo "<br>".$res;
-$sign = md5($res);
-echo "<br>".$sign;
-
-echo "
-<form name="input" action="test.php" method="get">
-Size: <input type="text" name="size">
-<input type="submit" value="Submit">
-</form> 
-";
+//echo "<p>输入字符串：</p>>";
+//echo "<form action='' method='post'>";
+//echo "<input type='text'' name='name'/>";
+//echo "<input type='submit' value='提交''>";
+//echo "</form>";
+$name = $GET["name"];
+echo cc_format($name);
+function cc_format($name){
+    $temp_array = array();
+    for($i=0;$i<strlen($name);$i++){
+        $ascii_code = ord($name[$i]);
+        if($ascii_code >= 65 && $ascii_code <= 90){
+            if($i == 0){
+                $temp_array[] = chr($ascii_code + 32);
+            }else{
+                $temp_array[] = '_'.chr($ascii_code + 32);
+            }
+        }else{
+            $temp_array[] = $name[$i];
+        }
+    }
+    return implode('',$temp_array);
+}
+?>
