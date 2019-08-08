@@ -47,7 +47,7 @@ $("#text").
 
 
 <?php
-//test  -------- test commit
+//test  -------- test commit updata is ok ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!~!：
 // function myTest()
 // {
 // static $x = 6;
