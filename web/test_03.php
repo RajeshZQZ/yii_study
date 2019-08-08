@@ -47,7 +47,7 @@ $("#text").
 
 
 <?php
-//test
+//test  -------- test commit
 // function myTest()
 // {
 // static $x = 6;
