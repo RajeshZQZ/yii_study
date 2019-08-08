@@ -10,19 +10,28 @@ define("PATH",dirname(__FILE__));
 define("ANDROID", PATH."\Android");
 define("HOST", "http://192.168.98.11");
 $act_path = HOST."/file_input.php";
+$arr_type = ['Android','ios','other'];
+if (!empty($_GET['type'])) {
+	$type = ($_GET['type'] == 'ios' || $_GET['type'] == 'Android') ?$_GET['type']:'other';
+}else{
+	$type =  "Android";
+}
 print <<<EOT
 <div>   
 <form action="{$act_path}" method="post" enctype="multipart/form-data">
-EOT;
-?>
-
 <table border = "4">
     <tr>
     <td>文件夹</td>
     <td>
-	<input type="radio" name="type" value="Android" checked>Android
-	<input type="radio" name="type" value="ios">ios
-	<input type="radio" name="type" value="other">other
+EOT;
+foreach ($arr_type as $value) {
+   if ($value == $type) {
+    	echo "<input type='radio' name='type' value='$value' checked>$value";
+    }else{
+    	echo "<input type='radio' name='type' value='$value'>$value";
+    }	
+}
+?>
     </td>	
     </tr>
     <trim(str)>
