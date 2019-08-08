@@ -47,6 +47,7 @@ $("#text").
 
 
 <?php
+//test
 // function myTest()
 // {
 // static $x = 6;
