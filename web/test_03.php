@@ -244,10 +244,11 @@ img_list($img);
 function img_list($arr) {
 	if (is_array($arr)) {
 		foreach ($arr as $key => $value) {
-			echo "<a href='$value'>";
-			echo "<img src = '$value' width='200' height='200' />";
-			echo "</a>";
-			echo "&nbsp";
+			echo <<<EDO
+			<a href='$value'>
+			<img src = '$value' width='200' height='200'/></a>
+			&nbsp
+EDO;
 		}
 	}else{
 		echo "<img src = 'https://res.handtoutiao.com/handtoutiao_test/article/95d42a6be30b03.png' />";
@@ -267,14 +268,38 @@ function game_list($url,$img,$host){
 		$i = 0 ;
 		foreach ($img as $v1) {
 			$img_url = $host.$v1;
-			echo "<a href='$url[$i]'>";
-			echo "<img src= '$img_url' width='200' height='200' />";
-			echo "</br>$img_url"."</br>$url[$i]"."</br>";
-			echo "</a>";
-			echo "&nbsp";
+			echo <<<EOD
+			<a href='$url[$i]'>
+			<img src= '$img_url' width='200' height='200' />
+			</br>$img_url</br>$url[$i]</br>
+			</a>
+			&nbsp
+EOD;
 			$i++;
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 

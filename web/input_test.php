@@ -36,7 +36,7 @@ foreach ($arr_type as $value) {
     </tr>
     <trim(str)>
         <td><input type="file" name="file" value=""></td>
-        <td><span style="color: red;">(*请将文件大小控制在30M以下!)</span>只支持gif, jpeg, jpg, png,txt,apk,xlsx,docx格式的文件</td>
+        <td><span style="color: red">(*请将文件大小控制在30M以下!)</span>只支持gif, jpeg, jpg, png,txt,apk,xlsx,docx格式的文件</td>
     </tr>
     <tr>
     <td>	
@@ -46,6 +46,5 @@ foreach ($arr_type as $value) {
 </table>
 </form>
 </div>
-
 </body>
 </html>

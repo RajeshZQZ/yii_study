@@ -56,6 +56,18 @@ function makeCode (url='') {
 }
 
 </script>
+</br>
+<a href="itms-services://?action=download-manifest&url=https://192.168.98.11/upload/ios/manifest.plist">download01</a>
+<br>
+<a href="https://192.168.98.11/download.php">download02</a>
+<br>
+<a href="http://192.168.98.11/upload/other/ca.pfx">ca.pfx</a>
+<br>
+<a href="http://192.168.98.11/upload/other/ca.crt">ca.crt</a>
+ca.crt
+<br>
+<a href="http://192.168.98.11/upload/other/client.crt">client.crt</a>
+
 </body>
 </html>
 
